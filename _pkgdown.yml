@@ -1,0 +1,18 @@
+url: https://shians.github.io/differential_methylation_workshop
+
+template:
+  params:
+    bootswatch: flatly
+    #ganalytics: UA-99999999-9
+
+home:
+  title: "differential_methylation_workshop"
+  type: inverse
+
+
+navbar:
+  right:
+   - icon: fa-github
+     href: https://github.com/shians/differential_methylation_workshop
+     
+
