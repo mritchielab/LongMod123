@@ -2,7 +2,12 @@
 title: "Long-read methylation data analysis with NanoMethViz and Bioconductor"
 author: "Shian Su^1^, Lucinda Xiao^1^, James Lancaster^1^, Tamara Cameron^1^, Kelsey Breslin^1^, Peter F. Hickey^1^, Marnie E. Blewitt^1^, Quentin Gouil^1,2^, Matthew E. Ritchie^1^"
 output: 
-    rmarkdown::html_vignette:
+    bookdown::word_document2:
+        reference_docx: template.dotx 
+        number_sections: false
+    bookdown::rtf_document2:
+        number_sections: false
+    bookdown::html_document2:
         number_sections: false
 bibliography: methylation_workflow.bib
 csl: f1000.csl
@@ -50,6 +55,7 @@ knitr::include_graphics("Figure1.png")
 # Loading in data
 
 ```{r, message = FALSE, warning = FALSE, cache = FALSE}
+library(BiocFileCache)
 library(dmrseq)
 library(dplyr)
 library(readr)
@@ -62,8 +68,18 @@ We begin by loading the packages and downloading the input data which contains t
 
 ```{r}
 if (!dir.exists("input")) {
-    options(timeout = 600)
-    download.file("https://zenodo.org/records/12747551/files/input.tar.gz?download=1", "input.tar.gz")
+    cache_path <- tools::R_user_dir("LongMod123", which = "cache")
+    bfc <- BiocFileCache::BiocFileCache(cache_path, ask = FALSE)
+    url <- "https://zenodo.org/records/12747551/files/input.tar.gz?download=1"
+    
+    qry <- BiocFileCache::bfcquery(bfc, url, exact = TRUE)
+
+    if (nrow(qry) == 0) {
+        input_path <- BiocFileCache::bfcadd(bfc, "input", fpath = url)
+    } else {
+        input_path <- bfc[[qry$rid]]
+    }
+
     utils::untar("input.tar.gz")
     file.remove("input.tar.gz")
 }
