@@ -74,8 +74,8 @@ if (!dir.exists("input")) {
         input_path <- bfc[[qry$rid]]
     }
 
-    utils::untar("input.tar.gz")
-    file.remove("input.tar.gz")
+    utils::untar(input_path)
+    file.remove(input_path)
 }
 ```
 
