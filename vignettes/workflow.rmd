@@ -2,8 +2,7 @@
 title: "Long-read methylation data analysis with NanoMethViz and Bioconductor"
 author: "Shian Su^1^, Lucinda Xiao^1^, James Lancaster^1^, Tamara Cameron^1^, Kelsey Breslin^1^, Peter F. Hickey^1^, Marnie E. Blewitt^1^, Quentin Gouil^1,2^, Matthew E. Ritchie^1^"
 output: 
-    bookdown::html_document2:
-        number_sections: false
+    rmarkdown::html_vignette
 bibliography: methylation_workflow.bib
 csl: f1000.csl
 vignette: >
