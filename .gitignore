@@ -1,4 +1,5 @@
 inst/doc
+vignettes/input
 *~
 .Rproj.user
 *Rproj
