@@ -71,11 +71,13 @@ if (!dir.exists("input")) {
     if (nrow(qry) == 0) {
         input_path <- BiocFileCache::bfcadd(bfc, "input", fpath = url)
     } else {
+        if (BiocFileCache::bfcneedsupdate(bfc, qry$rid)) {
+            BiocFileCache::bfcdownload(bfc, qry$rid)
+        }
         input_path <- bfc[[qry$rid]]
     }
 
-    utils::untar(input_path)
-    file.remove(input_path)
+    utils::untar(input_path, exdir = ".")
 }
 ```
 
