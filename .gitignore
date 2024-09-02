@@ -4,3 +4,4 @@ vignettes/input
 .Rproj.user
 *Rproj
 .DS_Store
+.Rhistory
