@@ -37,9 +37,10 @@ Depends:
     NanoMethViz
 Imports:
     BiocFileCache,
-    dplyr,
     TxDb.Mmusculus.UCSC.mm10.knownGene,
     org.Mm.eg.db,
+    IRanges,
+    patchwork
 Suggests: 
     knitr,
     rmarkdown,
