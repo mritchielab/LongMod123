@@ -24,6 +24,8 @@ Description: The development of long-read sequencing technologies has
     software to perform a complete analysis of long-read 5mC DNA methylation
     data starting from the raw data, to exploratory analysis, DMR
     identification, and visualisation of the results.
+BiocType: Workflow
+biocViews: EpigeneticsWorkflow
 License: Apache License (>= 2)
 Encoding: UTF-8
 LazyData: true
@@ -44,7 +46,8 @@ Imports:
 Suggests: 
     knitr,
     rmarkdown,
-    pkgdown
+    pkgdown,
+    BiocStyle
 URL: https://mritchielab.github.io/LongMod123/
 BugReports: https://github.com/mritchielab/LongMod123/issues/new
 VignetteBuilder: knitr

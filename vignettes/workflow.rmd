@@ -1,8 +1,27 @@
 ---
 title: "A streamlined workflow for long-read DNA methylation analysis with NanoMethViz and Bioconductor"
-author: "Shian Su^1^, Lucinda Xiao^1^, James Lancaster^1^, Tamara Cameron^1^, Kelsey Breslin^1^, Peter F. Hickey^1^, Marnie E. Blewitt^1^, Quentin Gouil^1^, Matthew E. Ritchie^1^"
+author:
+  - name: Shian Su
+    affiliation: "The Walter and Eliza Hall Institute of Medical Research, Parkville, Victoria, Australia; Department of Medical Biology, The University of Melbourne, Parkville, Victoria, Australia"
+  - name: Lucinda Xiao
+    affiliation: "The Walter and Eliza Hall Institute of Medical Research, Parkville, Victoria, Australia; Department of Medical Biology, The University of Melbourne, Parkville, Victoria, Australia"
+  - name: James Lancaster
+    affiliation: "The Walter and Eliza Hall Institute of Medical Research, Parkville, Victoria, Australia; Department of Medical Biology, The University of Melbourne, Parkville, Victoria, Australia"
+  - name: Tamara Cameron
+    affiliation: "The Walter and Eliza Hall Institute of Medical Research, Parkville, Victoria, Australia; Department of Medical Biology, The University of Melbourne, Parkville, Victoria, Australia"
+  - name: Kelsey Breslin
+    affiliation: "The Walter and Eliza Hall Institute of Medical Research, Parkville, Victoria, Australia; Department of Medical Biology, The University of Melbourne, Parkville, Victoria, Australia"
+  - name: Peter F. Hickey
+    affiliation: "The Walter and Eliza Hall Institute of Medical Research, Parkville, Victoria, Australia; Department of Medical Biology, The University of Melbourne, Parkville, Victoria, Australia"
+  - name: Marnie E. Blewitt
+    affiliation: "The Walter and Eliza Hall Institute of Medical Research, Parkville, Victoria, Australia; Department of Medical Biology, The University of Melbourne, Parkville, Victoria, Australia"
+  - name: Quentin Gouil
+    affiliation: "The Walter and Eliza Hall Institute of Medical Research, Parkville, Victoria, Australia; Department of Medical Biology, The University of Melbourne, Parkville, Victoria, Australia"
+  - name: Matthew E. Ritchie
+    affiliation: "The Walter and Eliza Hall Institute of Medical Research, Parkville, Victoria, Australia; Department of Medical Biology, The University of Melbourne, Parkville, Victoria, Australia"
+date: 13 Nov 2024
 output: 
-    rmarkdown::html_vignette
+    BiocStyle::html_document
 bibliography: methylation_workflow.bib
 csl: f1000.csl
 vignette: >
@@ -11,13 +30,11 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
 ---
 
-^1^The Walter and Eliza Hall Institute of Medical Research, Parkville, Victoria, Australia and Department of Medical Biology, The University of Melbourne, Parkville, Victoria, Australia.
-
 ```{r, cache = FALSE, include = FALSE}
 knitr::opts_chunk$set(message = FALSE)
-knitr::opts_chunk$set(out.width = 600)
-knitr::opts_chunk$set(fig.width = 8.2)
-knitr::opts_chunk$set(fig.height = 5.3)
+# knitr::opts_chunk$set(out.width = 600)
+# knitr::opts_chunk$set(fig.width = 8.2)
+# knitr::opts_chunk$set(fig.height = 5.3)
 ```
 
 # Abstract
@@ -289,7 +306,7 @@ In this workflow, we have demonstrated a complete end-to-end pipeline for analys
 
 # Software Avaliability
 
-This workflow makes use of various R packages available from the Bioconductor project, with version numbers shown below. The `LongMod123` workflow package itself is available at \url{https://github.com/mritchielab/LongMod123} and from Bioconductor.
+This workflow makes use of various R packages available from the Bioconductor project, with version numbers shown below. The `LongMod123` workflow package itself is available at [https://github.com/mritchielab/LongMod123](https://github.com/mritchielab/LongMod123).
 
 ```{r}
 sessionInfo()
