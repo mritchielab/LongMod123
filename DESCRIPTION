@@ -1,6 +1,6 @@
 Package: LongMod123
 Title: Long-read methylation data analysis with NanoMethViz and Bioconductor
-Version: 1.0.0
+Version: 0.9.9
 Authors@R: 
     person(given = "Shian",
            family = "Su",
