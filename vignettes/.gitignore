@@ -1,2 +1,7 @@
 *.html
 *.R
+timed*.Rmd
+
+input
+data
+input_large
